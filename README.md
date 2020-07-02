@@ -92,7 +92,7 @@ Doubt-Bag/
 ```   
       
   ## Database Schema:
-     ```shell
+     
     class Question(db.Document):
     heading = db.StringField(required=True, unique=True)
     topics = db.ListField(db.StringField(), required=True)
@@ -139,7 +139,7 @@ Doubt-Bag/
     User.register_delete_rule(Comments, 'added_by', db.CASCADE)
     User.register_delete_rule(Answers, 'added_by', db.CASCADE)
     User.register_delete_rule(AnswerComments, 'added_by', db.CASCADE)
-    ```
+  
   ## Api Endpoints:
   ### Auth
 1. `POST /api/auth/signup` 
