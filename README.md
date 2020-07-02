@@ -1,7 +1,7 @@
 # Doubt-Bag
 This app provides a platform for users to ask doubts, tag those questions to multiple topics and in turn, other users can comment on that question for further clarification and if they think they know the solution, they can answer the question. Further, if someone has doubts regarding the solution, people can post a comment for that solution. Lastly, if people are satisfied or dissatisfied with the solution, They can upvote or downvote the solution. The author of the question if he/she finds the answer satisfactory they can accept the answer.
 
-You can read more about doubt-bag in [medium-article](https://medium.com/@akanuragkumar712/building-flask-rest-app-with-flask-restful-auth-mongodb-7412bdef5d1e).
+You can read more about doubt-bag app and tutorial in [medium-article](https://medium.com/@akanuragkumar712/building-flask-rest-app-with-flask-restful-auth-mongodb-7412bdef5d1e).
 
 ## Quickstart
 
