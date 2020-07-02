@@ -8,7 +8,7 @@ class TestGetQuestions(BaseCase):
 
     def test_empty_response(self):
         response = self.app.get('/api/questions')
-        self.assertListEqual(response.json, [])
+        self.assertListEqual(response.json, []) 
         self.assertEqual(response.status_code, 200)
 
     def test_movie_response(self):
