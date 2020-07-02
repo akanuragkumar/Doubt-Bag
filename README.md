@@ -144,182 +144,182 @@ Doubt-Bag/
   ### Auth
 1. `POST /api/auth/signup` 
 
-```json
+```shell
  application/json - [{"email": "akanuragkumar712@gmail.com","password": "itssocool"}]
 ```
 ##### `response`
 
-```json
+```shell
  {"Success": "You successfully signed up!","id": <object_id>}
 ```
 2. `POST /api/auth/login` 
 
-```json
+```shell
  application/json - [{"email": "akanuragkumar712@gmail.com","password": "itssocool"}]
 ```
 ##### `response`
 
-```json
+```shell
  {"token": <token>}
 ```
 3. `POST /api/auth/forget` 
 
-```json
+```shell
  application/json - [{"email": "akanuragkumar712@gmail.com"]}
 ```
 ##### `response`
 
-```json
+```shell
  a mail will be send with reset password token
 ```
 4. `POST /api/auth/reset` 
 
-```json
+```shell
  application/json - [{"reset_token": <reset_token>,"password": "thisisalsocool"]
 ```
 ##### `response`
 
-```json
+```shell
  new password is set for the account and now the user has to login again.
 ```
 ### Question
 1. `POST /api/question` 
 
-```json
+```shell
  application/json - [{"topics": ["general","metal ability","awareness"],"question_body": "what is Doubt-bag 3?","heading": "what is Doubt-bag 3?"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your question has been posted","id": <object_id>}
 ```
 2. `GET /api/question/<id>` 
 
 ##### `response`
 
-```json
+```shell
  {"question": [{"_id": {"$oid": <object_id>}, "heading": "what is Doubt-bag?", "topics": ["general", "metal ability", "awareness"], "question_body": "what is Doubt-bag?", "added_by": {"$oid": <object_id>}}], "comments": [{"_id": {"$oid": <object_id>"}, "comment": "This is a very good question", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}}, {"_id": {"$oid": <object_id>}, "comment": "This is a very good question-1(duplicate)", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}}], "answers": [{"_id": {"$oid": <object_id>}, "answer": "This is a store house of all doubts people can have ranging to different topic.", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}}, {"_id": {"$oid": <object_id>}, "answer": "This is a store house of all doubts people can have ranging to different topic.(duplicate)", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}}]}
 ```
 3. `PUT /api/question/<id>` 
 
-```json
+```shell
  application/json - [{"topics": ["science","metal ability","awareness"],"question_body": "what is Doubt-bag 3?","heading": "what is Doubt-bag 3?"}]
 ```
 ##### `response`
 
-```json
+```shell
  {"Success": "Your question has been updated"}
 ```
 4. `DELETE /api/question/<id>` 
 
 ##### `response`
 
-```json
+```shell
  {"Success": "Your question has been deleted"}
 ```
 ### Comments
 1. `POST /api/comments?question_id=<id>` 
 
-```json
+```shell
  application/json - [{"comment" : "This is a very good question-1(duplicate)"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your comment has been posted","id": <object_id>}
 ```
 2. `GET /api/comment/<id>` 
 
 ##### `response`
 
-```json
+```shell
  [{"comment" : "This is a very good question-1(duplicate)", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}]
 ```
 3. `PUT /api/comments/<id>` 
 
-```json
+```shell
 application/json - [{"comment" : "This is a very good question-1"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your comment has been updated"}
 ```
 4. `DELETE /api/comments/<id>` 
 
 ##### `response`
 
-```json
+```shell
  {"Success": "Your comment has been deleted"}
 ```
 ### Answers
 1. `POST /api/answers?question_id=<id>` 
 
-```json
+```shell
  application/json - [{"answer" : "This is a very good question-1(duplicate)"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your answer has been posted","id": <object_id>}
 ```
 2. `GET /api/answers/<id>` 
 
 ##### `response`
 
-```json
+```shell
  [{"answer" : "This is a very good question-1(duplicate)", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>},{"answer_comment" : "This is a very good question-1","added_by": {"$oid": <object_id>}]
 ```
 3. `PUT /api/answers/<id>` 
 
-```json
+```shell
 application/json - [{"answer" : "This is a very good question-1"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your answer has been updated"}
 ```
 4. `DELETE /api/answer/<id>` 
 
 ##### `response`
 
-```json
+```shell
  {"Success": "Your answer has been deleted"}
 ```
 ### Answer_comment
 1. `POST /api/answer_comment?answer_id=<id>` 
 
-```json
+```shell
  application/json - [{"answer_comment" : "This is a very good question-1(duplicate)"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your comment has been posted","id": <object_id>}
 ```
 2. `GET /api/answer_comment/<id>` 
 
 ##### `response`
 
-```json
+```shell
  [{"comment" : "This is a very good question-1(duplicate)", "question": {"$oid": <object_id>}, "added_by": {"$oid": <object_id>}]
 ```
 3. `PUT /api/answer_comment/<id>` 
 
-```json
+```shell
 application/json - [{"answer_comment" : "This is a very good question-1"}]
 ```
 ##### `response`
 
-```json
+```shell
 {"Success": "Your comment has been updated"}
 ```
 4. `DELETE /api/answer_comment/<id>` 
 
 ##### `response`
 
-```json
+```shell
 {"Success": "Your comment has been deleted"}
 ```
 ### Vote and Accept of Answer
@@ -327,14 +327,14 @@ application/json - [{"answer_comment" : "This is a very good question-1"}]
 
 ##### `response`
 
-```json
+```shell
 {'Success': 'Answer is upvoted'}
 ```
 2. `PUT /api/downvote?answer_id=<id>` 
 
 ##### `response`
 
-```json
+```shell
 {'Success': 'Answer is downvoted'}
 ```
 3. `PUT /api/accepted?answer_id=<id>` 
