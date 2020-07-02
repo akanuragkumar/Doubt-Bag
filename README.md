@@ -165,7 +165,7 @@ Doubt-Bag/
 3. `POST /api/auth/forget` 
 
 ```json
- application/json - [{"email": "akanuragkumar712@gmail.com"]
+ application/json - [{"email": "akanuragkumar712@gmail.com"]}
 ```
 ##### `response`
 
@@ -341,6 +341,6 @@ application/json - [{"answer_comment" : "This is a very good question-1"}]
 
 ##### `response`
 
-```json
+```shell
 {'Success': 'Answer is accepted'}
 ```
