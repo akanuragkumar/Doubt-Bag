@@ -4,7 +4,7 @@ from tests.BaseCase import BaseCase
 
 
 class TestUserLogin(BaseCase):
-
+ 
     def test_successful_login(self):
         # Given
         email = "akanuragkumar712@gmail.com"
