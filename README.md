@@ -181,7 +181,7 @@ Doubt-Bag/
 
 ```shell
  new password is set for the account and now the user has to login again.
-```
+``` 
 ### Question
 1. `POST /api/question` 
 
