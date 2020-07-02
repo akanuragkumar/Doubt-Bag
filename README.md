@@ -92,7 +92,7 @@ Doubt-Bag/
 ```   
       
   ## Database Schema:
-     ```python
+     ```shell
     class Question(db.Document):
     heading = db.StringField(required=True, unique=True)
     topics = db.ListField(db.StringField(), required=True)
